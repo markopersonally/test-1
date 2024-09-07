@@ -26,7 +26,11 @@ export default function Products() {
       <ul>
         {products.map((product) => (
           <li key={product.id}>
-            <img src={product.img} alt={product.title} />
+            <img
+              className="w-[50px] h-[50px]"
+              src={product.image}
+              alt={product.title}
+            />
             {product.title} - ${product.price}
           </li>
         ))}
