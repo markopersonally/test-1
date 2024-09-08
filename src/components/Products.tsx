@@ -22,16 +22,18 @@ export default function Products() {
   }, []);
 
   return (
-    <div>
-      <ul>
+    <div className="max-w-[1400px]">
+      <ul className="flex flex-wrap gap-5">
         {products.map((product) => (
-          <li key={product.id}>
+          <li key={product.id} className="p-5 w-[250px] flex flex-col gap-5 border-2">
             <img
-              className="w-[50px] h-[50px]"
+              className="w-[250px] h-[250px]"
               src={product.image}
               alt={product.title}
             />
-            {product.title} - ${product.price}
+            <h3>{product.title}</h3>
+            <h4>{product.price}$</h4>
+            <button className="bg-blue-500 hover:bg-blue-700">Buy now</button>
           </li>
         ))}
       </ul>
